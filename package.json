@@ -1,0 +1,11 @@
+{
+  "name": "viagogogogo",
+  "version": "1.0.0",
+  "description": "Tech Test for Viagogo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jack Bittiner",
+  "license": "ISC"
+}
