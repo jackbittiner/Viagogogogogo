@@ -1,7 +1,7 @@
 describe('Event', function() {
 
   beforeEach(function() {
-    event = new Event(5,5)
+    event = new Event(5,5, 1)
   });
 
   describe('initialize', function() {
@@ -14,6 +14,10 @@ describe('Event', function() {
 
     it('is initialized with coordinates', function() {
       expect(event.coordinates).toEqual([5,5]);
+    });
+
+    it('is initialized with an ID', function() {
+      expect(event.uniqueID).toEqual(1);
     });
   });
 });
