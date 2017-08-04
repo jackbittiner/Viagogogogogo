@@ -1,7 +1,7 @@
 function Ticket() {
-  this.price = this.randomPrice();
+  this.price = randomPrice();
 }
 
-Ticket.prototype.randomPrice = function() {
+randomPrice = function() {
   return ((Math.random() * 100) + 1).toFixed(2);
 }
