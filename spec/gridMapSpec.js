@@ -1,7 +1,7 @@
 describe('gridMap', function() {
 
   beforeEach(function() {
-    gridMap = new gridMap(-10, 10, -10, 10)
+    gridMap = new GridMap(-10, 10, -10, 10)
   });
 
   describe('initialize', function() {
