@@ -10,5 +10,10 @@ describe('EventListing', function() {
       expect(eventListing.grid.coordinates[0]).toEqual([-10, -10]);
       expect(eventListing.grid.coordinates[440]).toEqual([10, 10]);
     });
+
+    it('it initializes with between 5 or 25 events', function() {
+      expect(eventListing.listings.count).not.toBeLessThan(5);
+      expect(eventListing.grid.coordinates[0]).not.toBeGreaterThan(25);
+    });
   });
 });

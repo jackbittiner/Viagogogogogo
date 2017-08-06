@@ -1,7 +1,7 @@
 describe('Event', function() {
 
   beforeEach(function() {
-    event = new Event(5,5, 1)
+    event = new Event([5,5], 1)
   });
 
   describe('initialize', function() {

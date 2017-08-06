@@ -1,10 +1,10 @@
-function Event(xCoordinate, yCoordinate, id) {
+function Event(coordinates, id) {
   this.tickets = [];
   var numberOfTickets = randomTickets()
   for (i = 0; i < numberOfTickets; i++) {
     this.tickets.push(new Ticket())
   }
-  this.coordinates = [xCoordinate, yCoordinate];
+  this.coordinates = coordinates;
   this.uniqueID = id;
 }
 
