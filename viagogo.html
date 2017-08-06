@@ -34,7 +34,7 @@
 
       function showEvents() {
         eventListing.listings.forEach(function(event){
-          var x = 600 - ((event.coordinates[0] + 10) * 30)
+          var x = ((event.coordinates[0] + 10) * 30)
           var y = 600 - ((event.coordinates[1] + 10) * 30)
           var canvas = document.getElementById("myCanvas");
           var ctx = canvas.getContext("2d");
@@ -52,8 +52,11 @@
         event.preventDefault();
         var x = $('#xcoordinate').val();
         var y = $('#ycoordinate').val();
-        x = (parseInt(x) + 10) * 30
-        y = 600 - (parseInt(y) + 10) * 30
+        x = parseInt(x)
+        y = parseInt(y)
+        var person = new Person(x,y)
+        x = (x + 10) * 30
+        y = 600 - (y + 10) * 30
         var canvas = document.getElementById("myCanvas");
         var ctx = canvas.getContext("2d");
         ctx.fillStyle = "#0000FF";
