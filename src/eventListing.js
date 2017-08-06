@@ -1,10 +1,11 @@
 function EventListing(x, x2, y, y2){
-	this.grid = new GridMap(x, x2, y, y2);
+	this.availableCoordinates = new GridMap(x, x2, y, y2);
   this.listings = [];
   var numberOfEvents = randomEvents();
   for (var i = 0; i <= numberOfEvents; i++) {
-    var coordinates = this.grid.coordinates[Math.floor(Math.random() * this.grid.coordinates.length)];
-    this.listings.push(new Event(coordinates, i))
+    var coordinates = this.availableCoordinates.coordinates[Math.floor(Math.random() * this.availableCoordinates.coordinates.length)];
+    this.listings.push(new Event(coordinates, i));
+    this.availableCoordinates.coordinates.splice(coordinates, 1);
   }
 }
 
