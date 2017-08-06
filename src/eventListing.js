@@ -1,6 +1,10 @@
 function EventListing(x, x2, y, y2){
 	this.freeVenues = new GridMap(x, x2, y, y2);
   this.listings = [];
+  this.generateEvents();
+}
+
+EventListing.prototype.generateEvents = function() {
   var numberOfEvents = randomEvents();
   for (var i = 0; i <= numberOfEvents; i++) {
     var coordinates = this.freeVenues.coordinates[Math.floor(Math.random() * this.freeVenues.coordinates.length)];
