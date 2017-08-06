@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Viagogo</title>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="src/ticket.js"></script>
+    <script src="src/gridMap.js"></script>
+    <script src="src/eventListing.js"></script>
+    <script src="src/event.js"></script>
+    <script src="src/person.js"></script>
+    <script src="src/distanceCalculator.js"></script>
+
+  </head>
+  <body>
+    <h1>Viagogo</h1>
+
+    <canvas id="myCanvas" width="600" height="600"
+    style="border:1px solid #101010;">
+    </canvas>
+
+    <script>
+
+    $(document).ready(function() {
+      var eventListing = new EventListing(-10,10,-10,10);
+      showEvents();
+
+      function showEvents() {
+        eventListing.listings.forEach(function(event){
+          var x = (event.coordinates[0] + 10) * 30
+          var y = (event.coordinates[1] + 10) * 30
+          var canvas = document.getElementById("myCanvas");
+          var ctx = canvas.getContext("2d");
+          ctx.fillStyle = "#FF0000";
+          ctx.fillRect(x,y,25,25);
+        });
+      };
+    });
+
+    </script>
+
+  </body>
+</html>
