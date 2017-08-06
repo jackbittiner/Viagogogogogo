@@ -15,12 +15,12 @@
   <body>
     <h1>Viagogo</h1>
 
-    <canvas id="myCanvas" width="600" height="600"
+    <canvas id="myCanvas" width="625" height="625"
     style="border:1px solid #101010;">
     </canvas>
 
       <form id="enter-coordinates">
-        <h3>Please enter your coordinates:</h3>
+        <h3>Please enter your coordinates from -10 to 10:</h3>
         <input id="xcoordinate" type="text" placeholder="x-coordinate"></input>
         <input id="ycoordinate" type="text" placeholder="y-coordinate"></input>
         <input type="submit"></input>
@@ -38,6 +38,11 @@
           var y = (event.coordinates[1] + 10) * 30
           var canvas = document.getElementById("myCanvas");
           var ctx = canvas.getContext("2d");
+          ctx.moveTo(312.25,0);
+          ctx.lineTo(312.25,625);
+          ctx.moveTo(0,312.25);
+          ctx.lineTo(625.25,312.25);
+          ctx.stroke();
           ctx.fillStyle = "#FF0000";
           ctx.fillRect(x,y,25,25);
         });
