@@ -19,6 +19,13 @@
     style="border:1px solid #101010;">
     </canvas>
 
+      <form id="enter-coordinates">
+        <h3>Please enter your coordinates:</h3>
+        <input id="xcoordinate" type="text" placeholder="x-coordinate"></input>
+        <input id="ycoordinate" type="text" placeholder="y-coordinate"></input>
+        <input type="submit"></input>
+      </form>
+
     <script>
 
     $(document).ready(function() {
@@ -35,6 +42,20 @@
           ctx.fillRect(x,y,25,25);
         });
       };
+
+      $('#enter-coordinates').submit(function(event) {
+        event.preventDefault();
+        var x = $('#xcoordinate').val();
+        var y = $('#ycoordinate').val();
+        x = (parseInt(x) + 10) * 30
+        y = (parseInt(y) + 10) * 30
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#0000FF";
+        ctx.fillRect(x,y,25,25);
+        $("#enter-coordinates").hide();
+      })
+
     });
 
     </script>
