@@ -20,4 +20,25 @@ describe('Event', function() {
       expect(event.uniqueID).toEqual(1);
     });
   });
+
+  describe('cheapestTicket', function() {
+
+    it('says there are no tickets if none are available', function() {
+      event.tickets = [];
+      event.calculateCheapestTicket();
+      expect(event.cheapestTicket).toEqual("There are no tickets available for this event!");
+    });
+
+    it('says sets the cheapest ticket to the ticket with the least price', function() {
+      ticket1 = new Ticket();
+      ticket2 = new Ticket();
+      ticket3 = new Ticket();
+      ticket1.price = 30.00
+      ticket2.price = 10.00
+      ticket3.price = 20.00
+      event.tickets = [ticket1, ticket2, ticket3];
+      event.calculateCheapestTicket();
+      expect(event.cheapestTicket.price).toEqual(10.00);
+    });
+  });
 });
