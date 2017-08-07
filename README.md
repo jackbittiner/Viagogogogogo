@@ -102,3 +102,15 @@ Also the nearest five events appear under the grid, showing the unique
 event ID, the cheapest ticket price, and the distance from the user:
 
 ![Event Info](./img/event-info.png)
+
+## Technologies Used
+
+__Javascript__: Although I'm probably better at showing good, clean coding practices
+in Ruby, I wanted to showcase my abilities in Javascript because it is a more common,
+more universal language and I do enjoy writing in it.
+
+__Jasmine__: For the testing.
+
+__HTML__: For the visualisation of the back-end.
+
+__JQuery__: For a dynamic front-end that handles the event of user input.
