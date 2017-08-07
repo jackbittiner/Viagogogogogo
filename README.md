@@ -56,3 +56,49 @@ an EventListing is displayed. All the events in the listing are shown on a grid.
 then has an ability to input coordinates which generates a Person. These coordinates
 are also displayed on the grid and underneath it shows the information of the closest
 five events and their cheapest ticket.
+
+## How to Run
+
+Clone this repository and then enter the root directory by typing the
+following into the terminal:
+
+```
+git clone git@github.com:jackbittiner/Viagogogogogo.git
+cd Viagogogogogo
+```
+
+### Testing
+
+This program was test-driven. To see the tests in all their passing glory
+enter the following command in the command line:
+
+```
+open SpecRunner.html
+```
+
+and you should see the following:
+
+![Jasmine Tests](./img/jasmine-tests.png)
+
+### The Program
+
+Enter the following command in the command line:
+
+```
+open viagogo.html
+```
+
+and you should see a grid of randomly positioned events, and two input fields
+for you to put down your coordinates like so:
+
+![Jasmine Tests](./img/grid-of-events.png)
+
+Input your desired coordinates and click submit. You should see a new blue
+square on the grid that represents your coordinate like so:
+
+![User Coordinates](./img/user-coordinates.png)
+
+Also the nearest five events appear under the grid, showing the unique
+event ID, the cheapest ticket price, and the distance from the user:
+
+![Event Info](./img/event-info.png)
