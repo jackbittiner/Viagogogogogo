@@ -7,9 +7,10 @@ function EventListing(x, x2, y, y2){
 EventListing.prototype.generateEvents = function() {
   var numberOfEvents = randomEvents();
   for (var i = 0; i <= numberOfEvents; i++) {
-    var coordinates = this.freeVenues.coordinates[Math.floor(Math.random() * this.freeVenues.coordinates.length)];
+    coordinates = this.freeVenues.coordinates[Math.floor(Math.random() * this.freeVenues.coordinates.length)];
+		index = this.freeVenues.coordinates.indexOf(coordinates)
     this.listings.push(new Event(coordinates, i));
-    this.freeVenues.coordinates.splice(coordinates, 1);
+    this.freeVenues.coordinates.splice(index, 1);
   }
 }
 
