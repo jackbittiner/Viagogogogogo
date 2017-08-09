@@ -42,7 +42,8 @@ calculates ever possible integer coordinate available within it.
 
 The __EventListing__ : This is constructed with a GridMap that sets the limitations of the
 world. It then generates a random amount of events within this world. When an event is
-created, those coordinates are removed from the GridMap making it unavailable.
+created, those coordinates are removed from the GridMap making it unavailable for
+other randomly generated events.
 
 The __DistanceCalculator__ : This calculates the Manhattan distance of a two coordinates.
 It first calculates the distance of a line, so from x to x, and then calculates from y to y.
@@ -114,3 +115,28 @@ __Jasmine__: For the testing.
 __HTML__: For the visualisation of the back-end.
 
 __JQuery__: For a dynamic front-end that handles the event of user input.
+
+## Questions?
+
+__Q)__ How might you change your program if you needed to support multiple events at the
+same location?
+
+__A)__ When events are randomly generated, the coordinates picked are removed from the
+freeVenues property. However if I wanted to add a new event at the same location,
+it is still possible to create a new event with the same coordinates as another event.
+The method would look something like this:
+
+```
+EventListing.prototype.addEvent(coordinates) = function() {
+  var ID = this.listings.length;
+  this.listings.push(new Event(coordinates, ID));
+}
+```
+
+__Q)__ How would you change your program if you were working with a much larger
+world size?
+
+__A)__ It is very simple to change the size of the world I'm working with. I have a
+constructor called gridmap that decides the size of the world, and creates all the
+possible coordinates in the world. If you pass it larger numbers as parameters,
+then a larger world will be created.
