@@ -140,3 +140,25 @@ __A)__ It is very simple to change the size of the world I'm working with. I hav
 constructor called gridmap that decides the size of the world, and creates all the
 possible coordinates in the world. If you pass it larger numbers as parameters,
 then a larger world will be created.
+
+## What Next?
+
+I feel I might have spread myself a little thin on this tech testing as I
+decided to do both front and back-end. If I had more time these are the
+further things that I would work on.
+
+__User Input__: There is nothing stopping the user from putting in a a
+non-numeric value in the input fields. There is also no restrictions from
+them putting in a number that is larger than the confounds of the grid.
+To address this I would raise errors on the backend if the user's coordinates
+surpassed the coordinates of the grid. Then I would probably stop it in the
+front by having the user select a coordinate from a list rather than
+inputting a value.
+
+__Adding More Events__: The code fulfils the purpose of the test. It
+generates random event data. But it would be nice to add more events if
+needed.
+
+__Design__: I tend to always focus on the backend of a project first, and
+then make it look pretty afterwards. If I had more time I would design the
+page more and give it some pizzazz that it desperately needs.
