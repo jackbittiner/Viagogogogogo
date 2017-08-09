@@ -162,3 +162,13 @@ needed.
 __Design__: I tend to always focus on the backend of a project first, and
 then make it look pretty afterwards. If I had more time I would design the
 page more and give it some pizzazz that it desperately needs.
+
+__Price__: If there are no tickets for an event, the price on the front-end
+is displayed as '$undefined'. I would implement a simple if else statement here
+that would display "There are no tickets for this event" if there were no tickets.
+
+## Thank you!
+
+Thank you for taking the time to look over this test! There is still a bit more work
+that needs to be done on it, but I hope it showcases my ability to think logically
+and work well with code!
